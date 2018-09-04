@@ -1,0 +1,12 @@
+<mat-card-content *ngIf="results">
+  
+  <p>
+    <span matBadge="{{ results[0].value }}" matBadgeOverlap="false">{{ results[0].title }}</span>
+  </p>
+  <p>
+    <span matBadge="{{ results[1].value }}" matBadgeOverlap="false">{{ results[1].title }}</span>
+  </p>
+  <p>
+    <span matBadge="{{ results[2].value }}" matBadgeOverlap="false">{{ results[2].title }}</span>
+  </p>
+</mat-card-content>

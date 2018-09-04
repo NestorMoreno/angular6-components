@@ -1,0 +1,8 @@
+<mat-card-header *ngIf="userInfo">
+  <div mat-card-avatar class="example-header-image"
+        [style.backgroundImage]="'url('+ userInfo.img +')'"
+  ></div>
+  <mat-card-title>{{ userInfo.name }}</mat-card-title>
+  <mat-card-subtitle>{{ userInfo.title}}</mat-card-subtitle>
+</mat-card-header>
+ <img mat-card-image src="{{ userInfo.img}}" alt="">
