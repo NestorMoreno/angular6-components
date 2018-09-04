@@ -22,7 +22,7 @@ export class AppComponent {
   */
 
   public user = Persona;
-  
+      
 
   /*
   likeClick():void {
