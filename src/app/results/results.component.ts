@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-results',
@@ -9,11 +10,24 @@ export class ResultsComponent implements OnInit {
 
   @Input() results:any;
 
-  constructor() { 
+  constructor(private service: AppService) { 
     
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    console.log("ngOnInit()");
+  }
+
+  // ngDoCheck(): void {
+  //   console.log("ngDoCheck()")
+  // }
+
+  // ngAfterContentInit() {
+  //   console.log("ngAfterContentInit()");
+  // }
+
+  public informParent() {
+    this.service.inform("nuevo valor para observable");
   }
 
 }

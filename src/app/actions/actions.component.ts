@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-actions',
@@ -9,9 +10,17 @@ export class ActionsComponent implements OnInit {
 
   @Input() actions:any;
 
-  constructor() { }
+  constructor(private service: AppService) { }
 
   ngOnInit() {
   }
 
+  public likeClick(){
+    this.service.inform("nuevo valor para observable");
+  }
+
+  public dislikeClick(){
+    this.service.setDatos("nuevo valor para observable");
+  }
+  
 }

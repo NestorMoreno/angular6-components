@@ -9,6 +9,8 @@ import { UserInfoComponent } from './user-info/user-info.component';
 import { ActionsComponent } from './actions/actions.component';
 import { ResultsComponent } from './results/results.component';
 
+import { AppService } from './app.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,7 @@ import { ResultsComponent } from './results/results.component';
     MatButtonModule,
     MatBadgeModule
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
