@@ -1,5 +1,4 @@
 //import { Datos } from "./datos.model";
-
 export const Persona =  
     {
         userInfo:{
