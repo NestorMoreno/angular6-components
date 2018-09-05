@@ -15,19 +15,6 @@ export class ResultsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log("ngOnInit()");
-  }
-
-  // ngDoCheck(): void {
-  //   console.log("ngDoCheck()")
-  // }
-
-  // ngAfterContentInit() {
-  //   console.log("ngAfterContentInit()");
-  // }
-
-  public informParent() {
-    this.service.inform("nuevo valor para observable");
   }
 
 }

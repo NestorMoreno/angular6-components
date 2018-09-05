@@ -1,12 +1,21 @@
 <mat-card-content *ngIf="results">
-  
-  <p>
-    <span matBadge="{{ results[0].value }}" matBadgeOverlap="false">{{ results[0].title }}</span>
-  </p>
-  <p>
-    <span matBadge="{{ results[1].value }}" matBadgeOverlap="false">{{ results[1].title }}</span>
-  </p>
-  <p>
-    <span matBadge="{{ results[2].value }}" matBadgeOverlap="false">{{ results[2].title }}</span>
-  </p>
+  <mat-list>
+    <mat-list-item>
+      {{ results[0].title }}
+      <mat-icon matBadge="{{ results[0].value }}" matBadgeOverlap="true"
+      matBadgeSize="medium" matBadgeColor="accent"></mat-icon>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      {{ results[1].title }} 
+      <mat-icon matBadge="{{ results[1].value }}" matBadgeOverlap="true"
+     matBadgeSize="medium" matBadgeColor="warn"></mat-icon>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      {{ results[2].title }}
+      <mat-icon matBadge="{{ results[2].value }}" matBadgeOverlap="false"
+      matBadgeSize="large" matBadgeColor="primary"></mat-icon>
+    </mat-list-item>
+  </mat-list>
 </mat-card-content>

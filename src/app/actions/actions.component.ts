@@ -16,11 +16,11 @@ export class ActionsComponent implements OnInit {
   }
 
   public likeClick(){
-    this.service.inform("nuevo valor para observable");
+    this.service.addLike();
   }
 
   public dislikeClick(){
-    this.service.setDatos("nuevo valor para observable");
+    this.service.addDislike();
   }
   
 }

@@ -1,4 +1,10 @@
-<mat-card-actions >
-  <button mat-button (click)="likeClick()">LIKE</button>
-  <button mat-button (click)="dislikeClick()">DISLIKE</button>
+<mat-card-actions *ngIf="actions">
+  <div class="button-row">
+    <button mat-flat-button (click)="likeClick()" color="accent">
+      {{ actions[0].title }}
+    </button>&nbsp;
+    <button mat-flat-button (click)="dislikeClick()" color="warn">
+      {{ actions[1].title }}
+    </button>
+  </div>
 </mat-card-actions>
