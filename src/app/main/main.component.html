@@ -1,6 +1,9 @@
 <mat-card class="example-card">
+    <div *ngFor="let user of users">
+   
+        <app-user-info [userInfo]="user.userInfo"></app-user-info>
+        <app-results [results]="user.results"></app-results>
+        <app-actions [actions]="user.actions"></app-actions>
+    </div>
 
-    <app-user-info [userInfo]="user.userInfo"></app-user-info>
-    <app-results [results]="user.results"></app-results>
-    <app-actions [actions]="user.actions"></app-actions>
 </mat-card>

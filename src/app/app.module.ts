@@ -23,6 +23,9 @@ import { appRoutes } from './routing';
 import { MainComponent } from './main/main.component';
 import { NavComponent } from './nav/nav.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { DataSourceService } from './data-source.service';
+import { RepositoryService } from './repository.service';
 
 @NgModule({
   declarations: [
@@ -38,6 +41,7 @@ import { NavComponent } from './nav/nav.component';
     RouterModule.forRoot(appRoutes),
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatCardModule,
     MatButtonModule,
     MatBadgeModule,
@@ -46,7 +50,11 @@ import { NavComponent } from './nav/nav.component';
     MatTabsModule,
     MatChipsModule
   ],
-  providers: [AppService],
+  providers: [
+    AppService, 
+    DataSourceService, 
+    RepositoryService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

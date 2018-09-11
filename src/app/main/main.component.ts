@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Persona } from '../data';
+import { RepositoryService } from '../repository.service';
 
 @Component({
   selector: 'app-main',
@@ -8,9 +9,12 @@ import { Persona } from '../data';
 })
 export class MainComponent implements OnInit {
   public user = Persona;
-  constructor() { }
+  public users;
+  constructor(private repository:RepositoryService){ }
 
-  ngOnInit() {
+  ngOnInit(){
+    this.users = this.repository.getInfo();
   }
+   
 
 }
